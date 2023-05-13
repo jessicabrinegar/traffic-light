@@ -2,37 +2,41 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* var(--name, value) */
+:root {
+  --red: #ce0101;
+  --yellow: rgb(222, 222, 30);
+  --green: rgb(4, 160, 4);
+  --light:#f1f89d;
+  --shadow:0rem 0rem 2rem 2rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.stoplight-post{
+  width:1rem;
+  height:5rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.red-light , .yellow-light , .green-light{
+  width:5rem;
+  height:5rem;
+  margin: 0.3rem 0.2rem;
 }
-
-.App-link {
-  color: #61dafb;
+.red-light{
+  background: var(--red);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.yellow-light{
+  background: var(--yellow);
+}
+.green-light{
+  background: var(--green);
+}
+.red-light.selected{
+  background: radial-gradient(var(--red) 40%, var(--light));
+  box-shadow: var(--shadow) rgb(243, 183, 159);
+}
+.yellow-light.selected{
+  background: radial-gradient(var(--yellow), var(--light));
+  box-shadow: var(--shadow) var(--light);
+}
+.green-light.selected{
+  background: radial-gradient(var(--green) 40%, var(--light));
+  box-shadow: var(--shadow) rgb(194, 232, 128);
 }

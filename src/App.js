@@ -9,9 +9,8 @@ function App() {
         <Stoplight />
         <p className="mt-3">Click on a light!</p>
         <p className="m-5"> 
-          Made by{" "}
-          <a href="https://github.com/jessicabrinegar">Jessie B</a>, with
-          love!
+          Made with React.js. Click {" "}
+          <a href="https://github.com/jessicabrinegar/traffic-light">here</a> to view code.
         </p>
 		  </div>
     </div>
